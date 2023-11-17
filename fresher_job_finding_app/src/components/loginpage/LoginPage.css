@@ -1,0 +1,50 @@
+/* LoginPage.css */
+
+.login-container {
+    position: relative;
+    height: 100vh;
+    background-color: #3498db; /* Blue background color */
+  }
+  
+  .login-form-container {
+    background-color: #fff; /* White background for the form container */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  }
+  
+  /* Custom shapes: Adjust the colors, sizes, and positions as needed */
+  .shape1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #f39c12; /* Yellow */
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+  }
+  
+  .shape2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #2ecc71; /* Green */
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+  }
+
+  .login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #3498db; /* Blue background color */
+  }
+  .submit_button {
+    
+    margin-top: 20px;
+  }
+  
+  
