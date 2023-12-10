@@ -7,9 +7,9 @@ import { useRouter } from 'next/router';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { setUserData } from '@/Utils/UserSlice';
 import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
-
-
-
+import logo from './aserts/images.png';
+import Image from 'next/image'
+const colors = require('tailwindcss/colors')
 export default function NavBar() {
     const dispatch = useDispatch();
     const [openJobs, setOpenJobs] = useState(false)
@@ -86,13 +86,15 @@ export default function NavBar() {
 
     return (
         <>
-            <div className={`w-full ${scrolled ? "bg-indigo-600/70" : "bg-indigo-600"} px-6 h-20 bg-indigo-600 text-white flex items-center justify-between fixed top-0 left-0 z-50`}>
-                <div className='px-2 h-full flex items-center justify-center'>
-                    <p className='uppercase font-semibold tracking-widest text-lg'>JOB-PORTAL</p>
+            <div className={`w-full ${scrolled ? "bg-blue-100" : "bg-blue-600"} px-6 h-20 bg-blue-500 text-white flex items-center justify-between fixed top-0 left-0 z-50`}>
+                <div className='px-2 h-full flex items-center justify-center space-x-4'>
+                    <div className=''>
+                        <Image width={50} height={70} src={logo} alt="no-image-found" />
+                    </div>
+                    <p className='uppercase font-semibold tracking-widest text-lg'>evenbeens</p>
                 </div>
                 <div className='px-2 h-full hidden items-center justify-center lg:flex'>
                     <Link href={'/'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Home</Link>
-                    <Link href={'/frontend/postAJob'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Post Jobs</Link>
                     <Link href={'/frontend/displayJobs'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >View Jobs</Link>
                     <Link href={'/frontend/postedJob'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Posted Jobs</Link>
                     <Link href={'/frontend/dashboard'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Dashboard</Link>
@@ -105,6 +107,7 @@ export default function NavBar() {
 
                                 <BiLogOut onClick={handleLogout} className=' cursor-pointer text-3xl hover:text-red-500 transition-all duration-700' />
                                 <p className='text-lg px-4 font-semibold'>{user?.name}</p>
+                                <img src={logo} alt="Logo" className='w-24 h-10'/>
                             </>
                         ) : (
                             <>
