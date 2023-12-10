@@ -91,7 +91,7 @@ export default function NavBar() {
                     <div className=''>
                         <Image width={70} height={70} className="flex rounded-full mb-4 md:mb-0" src={logo} alt="no-image-found" />
                     </div>
-                    <p className='uppercase font-semibold tracking-widest text-lg'>evenbeens</p>
+                    <p className='uppercase font-semibold tracking-widest text-lg'>FindJob</p>
                 </div>
                 <div className='px-2 h-full hidden items-center justify-center lg:flex'>
                     <Link href={'/'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Home</Link>
@@ -99,7 +99,7 @@ export default function NavBar() {
                     <Link href={'/frontend/displayJobs'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >View Jobs</Link>
                     <Link href={'/frontend/postedJob'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Posted Jobs</Link>
                     <Link href={'/frontend/dashboard'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Dashboard</Link>
-                    <Link href={'/'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Contact</Link>
+                    <Link href={'/frontend/contact'} className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase" >Contact</Link>
                 </div>
                 <div className='px-2 h-full hidden items-center justify-center lg:flex ' >
                     {
