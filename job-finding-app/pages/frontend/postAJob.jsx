@@ -91,6 +91,27 @@ export default function PostAJob() {
         { value: 'internship', label: 'Internship' },
         { value: 'contract', label: 'Contract' },
     ]
+    const options1 = [
+        {value:'Architects',label: 'Architects'},
+        {value:'Surveyor',label: 'Surveyor'},
+        {value:'Quantity',label: 'Quantity'},
+        {value:'CivilEngTrainee',label:'Civil Eng Trainee'},
+        {value:'DesingEngineer',label:'Desing Engineer'},
+        {value:'InteriorDesigners',label:'Interior Designers'},
+        {value:'SoftwareEngineers',label:'Software Engineers'},
+        {value:'MobileAppDeveloper',label:'Mobile App Developer'},
+        {value:'BusinessAnalyst',label:'Business Analyst'},
+        {value:'FullStackDevelopment',label:'Full Stack Development'},
+        {value:'DataAnalyst',label:'Data Analyst'},
+        {value:'Ui/UxDesigner',label:'Ui/Ux Designer'},
+        {value:'SoftwarecloudEngineer',label:'Software cloud Engineer'},
+        {value:'GraphicDesigning',label:'Graphic Designing'},
+        {value:'AnyDesigning',label:'Any Designing'},
+        {value:'TraineeGraphicDesingner',label:'Trainee Graphic Desingner'},
+        {value:'SocialMediaSEOContentWriting',label:'Social Media, SEO $ Content Writing'},
+        {value:'DigitalMarketing',label:'Digital Marketing'},
+
+    ]
 
 
 
@@ -140,10 +161,12 @@ export default function PostAJob() {
                     </div>
                     <div className='w-full mb-4  flex flex-col items-start justify-center'>
                         <label htmlFor="jobCategory" className='mb-1 text-base font-semibold'>Job Category :</label>
-                        <input onChange={(e) => setFormData({ ...formData, job_category: e.target.value })} type="text" id='jobCategory' className='w-full py-2 px-3 mb-2 border border-indigo-600 rounded' placeholder='Enter Category of job' />
+                        <Select onChange={(e) => setFormData({ ...formData, job_type: e.value })} placeholder="Please Select job category" className='w-full py-2 px-3 mb-2 border border-indigo-600 rounded' options={options1} />
+                        <div className=' mb-4  flex flex-col items-start justify-center'>
                         {
                             error.job_category && <p className="text-sm text-red-500">{error.job_category}</p>
                         }
+                        </div>
                     </div>
                     <Select onChange={(e) => setFormData({ ...formData, job_type: e.value })} placeholder="Please Select Job type" options={options} />
                     <div className='w-full mb-4  flex flex-col items-start justify-center'>
