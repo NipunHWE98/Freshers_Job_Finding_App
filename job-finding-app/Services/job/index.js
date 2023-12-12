@@ -21,22 +21,34 @@ export const post_job = async (formData) => {
     }
 }
 
-
-// get job api
+// services/job.js
 export const get_job = async () => {
     try {
-        const res = await fetch(`http://localhost:3000/api/job/getAllJobs`, {
-            method: 'GET',
-            headers : {
-                'Authorization': `Bearer ${Cookies.get('token')}`
-            }
-        })
-        const data = res.json();
-        return data;
+      const response = await fetch("http://localhost:3000/api/job/getAllJobs");
+      if (!response.ok) {
+        throw new Error("Failed to fetch job data");
+      }
+      return response.json();
     } catch (error) {
-        console.log('error in getting job (service) => ', error);
+      throw new Error(error.message);
     }
-}
+  };
+  
+
+// // get job api
+// export const get_job = async () => {
+//     try {
+//         const res = await fetch(`http://localhost:3000/api/job/getAllJobs`, {
+//             method: 'GET',
+           
+//         })
+//         const data = res.json();
+//         console.log('data in service => ', data);
+//         return data;
+//     } catch (error) {
+//         console.log('error in getting job (service) => ', error);
+//     }
+// }
 
 // get specified job api
 export const get_specified_job = async (id) => {
